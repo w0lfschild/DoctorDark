@@ -5,7 +5,7 @@
 # Information:
 
 - Designed for 10.10+   
-- DoctorDark is a SIMBL plugin that tries to bring dark mode to every application window on OS X    
+- DoctorDark is a SIMBL plugin that tries to bring dark mode to every application window on macOS   
 - Author: [w0lfschild](https://github.com/w0lfschild)
 
 # Note:
