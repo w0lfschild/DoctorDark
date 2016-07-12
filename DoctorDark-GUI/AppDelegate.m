@@ -18,8 +18,14 @@ NSDictionary *sharedDict;
 
 @implementation AppDelegate
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    [self.window setTitle:@"Doctor Dark Blacklister"];
     
     //
     [self getAPPList];
