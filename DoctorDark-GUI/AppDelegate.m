@@ -128,6 +128,8 @@ NSDictionary *sharedDict;
         }
     }
     [_mainView setFrame:frame];
+    
+    NSLog(@"%@", myDict);
 }
 
 - (IBAction)toggleItem:(NSButton*)btn {

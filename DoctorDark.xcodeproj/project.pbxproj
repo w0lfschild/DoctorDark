@@ -12,6 +12,7 @@
 		FB520CF21D24A10100FE378C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB520CED1D24A10100FE378C /* AppDelegate.m */; };
 		FB520CF31D24A10100FE378C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB520CEE1D24A10100FE378C /* main.m */; };
 		FB520CF81D24A11F00FE378C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB520CF51D24A10800FE378C /* MainMenu.xib */; };
+		FBC27FE71E637D3F00F6516D /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		FB520CEF1D24A10100FE378C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "DoctorDark-GUI/Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB520CF61D24A10800FE378C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "DoctorDark-GUI/Base.lproj/MainMenu.xib"; sourceTree = SOURCE_ROOT; };
 		FB61D73E1C3CA27D00FA3C4C /* DoctorDark-GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DoctorDark-GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC27FE51E637D3F00F6516D /* ZKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = SOURCE_ROOT; };
+		FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 		FB16B34E1BA7D821009F455F /* DoctorDark */ = {
 			isa = PBXGroup;
 			children = (
+				FBC27FE81E637D4B00F6516D /* ZKSwizzle */,
 				FB520CE61D24A0F600FE378C /* DoctorDark.m */,
 				FB520CE71D24A0F600FE378C /* Info.plist */,
 			);
@@ -85,6 +89,15 @@
 			);
 			name = "DoctorDark-GUI";
 			path = "zestyWin-GUI";
+			sourceTree = "<group>";
+		};
+		FBC27FE81E637D4B00F6516D /* ZKSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				FBC27FE51E637D3F00F6516D /* ZKSwizzle.h */,
+				FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */,
+			);
+			name = ZKSwizzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +145,7 @@
 		FB16B3441BA7D821009F455F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Wolfgang Baird";
 				TargetAttributes = {
 					FB16B34B1BA7D821009F455F = {
@@ -217,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB520CE81D24A0F600FE378C /* DoctorDark.m in Sources */,
+				FBC27FE71E637D3F00F6516D /* ZKSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +270,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -299,8 +315,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
