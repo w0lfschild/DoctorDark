@@ -23,7 +23,9 @@
 @end
 
 drdark           *plugin;
+BOOL              useWhitelist;
 NSMutableArray   *itemBlacklist;
+NSMutableArray   *itemWhitelist;
 NSDictionary     *sharedDict = nil;
 static void      *dd_isActive = &dd_isActive;
 
@@ -134,20 +136,30 @@ static void      *dd_isActive = &dd_isActive;
 /* Load and setup our bundles preferences */
 -(void)dd_initializePrefs {
     /* Load existing preferences for our bundle */
-    itemBlacklist = [[NSMutableArray alloc] initWithArray:APP_BLACKLIST];
+    itemWhitelist = [[NSMutableArray alloc] init];
+    itemBlacklist = [[NSMutableArray alloc] init];
+    useWhitelist = false;
     
-    NSUserDefaults *sharedPrefs = [[NSUserDefaults alloc] initWithSuiteName:@"org.w0lf.drdark"];
-    sharedDict = [sharedPrefs dictionaryRepresentation];
+    [itemBlacklist addObjectsFromArray:APP_BLACKLIST];
+    
+    NSMutableDictionary *pluginPrefs = [NSMutableDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/org.w0lf.drdark.plist"]];
+    NSArray *addItems;
+    addItems = [pluginPrefs objectForKey:@"bundleWhitelist"];
+    [itemWhitelist addObjectsFromArray:addItems];
+    addItems = [pluginPrefs objectForKey:@"bundleBlacklist"];
+    [itemBlacklist addObjectsFromArray:addItems];
+    
+    useWhitelist = [[pluginPrefs objectForKey:@"useWhitelist"] boolValue];
     
     /* Loop through blacklist and add all items to preferences if they don't already exist */
-    
-    /* Syncronize preferences */
-    sharedDict = [sharedPrefs dictionaryRepresentation];
-    [sharedPrefs synchronize];
+//    NSLog(@"wb_ %@", itemWhitelist);
 }
 
 -(BOOL)shouldApply:(NSString*) class {
     BOOL result = true;
+    if (useWhitelist)
+        if (![itemWhitelist containsObject:[[NSBundle mainBundle] bundleIdentifier]])
+            result = false;
     if ([itemBlacklist containsObject:class])
         result = false;
     if ([APP_BLACKLIST containsObject:[[NSBundle mainBundle] bundleIdentifier]])
