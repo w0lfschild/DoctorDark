@@ -14,20 +14,28 @@
 #define APP_BLACKLIST @[@"com.apple.loginwindow", @"com.apple.iTunes", @"com.apple.Terminal",\
                         @"com.sublimetext.2", @"com.sublimetext.3", @"com.googlecode.iterm2",\
                         @"com.google.Chrome.canary", @"com.google.Chrome", @"com.jriver.MediaCenter21",\
-                        @"com.teamspeak.TeamSpeak3", @"com.cocoatech.PathFinder", @"com.apple.ActivityMonitor",\
-                        @"com.github.GitHub"]
+                        @"com.teamspeak.TeamSpeak3", @"com.cocoatech.PathFinder", @"com.github.GitHub",\
+                        @"com.apple.ActivityMonitor"]
 
-#define CLS_BLACKLIST @[@"NSStatusBarWindow", @"BookmarkBarFolderWindow", @"TShrinkToFitWindow", @"QLFullscreenWindow", @"QLPreviewPanel"]
+#define APP_WHITELIST @[@"com.apple.finder", @"com.apple.systempreferences"]
+
+#define CLS_BLACKLIST @[@"NSStatusBarWindow", @"BookmarkBarFolderWindow", @"TShrinkToFitWindow",\
+                        @"QLFullscreenWindow", @"QLPreviewPanel", @"TDesktopWindow",\
+                        @"TDesktopIcon", @"TDesktopTitleBubbleView", @"TIconSelectionView",\
+                        @"TNewIconView", @"TBasicImageView", @"TDesktopIconSelectionView",\
+                        @"TDesktopIconView"]
 
 @interface drdark : NSObject
 @end
 
-drdark           *plugin;
-BOOL              useWhitelist;
-NSMutableArray   *itemBlacklist;
-NSMutableArray   *itemWhitelist;
-NSDictionary     *sharedDict = nil;
-static void      *dd_isActive = &dd_isActive;
+drdark          *plugin;
+BOOL            resizing;
+BOOL            useWhitelist;
+NSMutableArray  *itemBlacklist;
+NSMutableArray  *itemWhitelist;
+NSDictionary    *sharedDict = nil;
+static void     *dd_isActive = &dd_isActive;
+SEL             setTFC;
 
 @implementation drdark
 
@@ -42,9 +50,7 @@ static void      *dd_isActive = &dd_isActive;
 - (NSAppearance *)darkAppearance {
     static NSAppearance *dark;
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dark = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
-    });
+    dispatch_once(&onceToken, ^{ dark = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark]; });
     return dark;
 }
 
@@ -53,10 +59,12 @@ static void      *dd_isActive = &dd_isActive;
     /* Initialize an instance of our plugin */
     plugin = [drdark sharedInstance];
     NSInteger osx_ver = [[NSProcessInfo processInfo] operatingSystemVersion].minorVersion;
+    setTFC = NSSelectorFromString(@"setTitleFontColor:");
     if (osx_ver >= 9) {
         /* Check if our current bundleIdentifier is blacklisted */
         [plugin dd_initializePrefs];
-        if (![itemBlacklist containsObject:[[NSBundle mainBundle] bundleIdentifier]]) {
+        
+        if ([plugin shouldApply:@""]) {
             /* Loop through all our windows and set their appearance */
             for (NSWindow *win in [[NSApplication sharedApplication] windows])
                 [plugin dd_applyDarkAppearanceToWindow:win];
@@ -114,12 +122,12 @@ static void      *dd_isActive = &dd_isActive;
             [view performSelector:@selector(setBackgroundColor:) withObject:[NSColor colorWithCalibratedWhite:0.1 alpha:1.0]];
         }
         
-        if ([view isKindOfClass:NSClassFromString(@"TStatusBarStackView")]) {
-            
-        }
+//        if ([view isKindOfClass:NSClassFromString(@"TStatusBarStackView")]) {
+//
+//        }
         
-        if ([view respondsToSelector:@selector(setTitleFontColor:)]) {
-            [view performSelector:@selector(setTitleFontColor:) withObject:[NSColor whiteColor]];
+        if ([view respondsToSelector:setTFC]) {
+            [view performSelector:setTFC withObject:[NSColor whiteColor]];
         }
         
         if ([view respondsToSelector:@selector(setTextColor:)]) {
@@ -138,7 +146,7 @@ static void      *dd_isActive = &dd_isActive;
     /* Load existing preferences for our bundle */
     itemWhitelist = [[NSMutableArray alloc] init];
     itemBlacklist = [[NSMutableArray alloc] init];
-    useWhitelist = false;
+    useWhitelist = true;
     
     [itemBlacklist addObjectsFromArray:APP_BLACKLIST];
     
@@ -146,25 +154,29 @@ static void      *dd_isActive = &dd_isActive;
     NSArray *addItems;
     addItems = [pluginPrefs objectForKey:@"bundleWhitelist"];
     [itemWhitelist addObjectsFromArray:addItems];
+    [itemWhitelist addObjectsFromArray:APP_WHITELIST];
     addItems = [pluginPrefs objectForKey:@"bundleBlacklist"];
     [itemBlacklist addObjectsFromArray:addItems];
-    
-    useWhitelist = [[pluginPrefs objectForKey:@"useWhitelist"] boolValue];
+    [itemBlacklist addObjectsFromArray:APP_BLACKLIST];
+    useWhitelist = ![[pluginPrefs objectForKey:@"useBlacklist"] boolValue];
     
     /* Loop through blacklist and add all items to preferences if they don't already exist */
+//    NSLog(@"wb_ %@", pluginPrefs);
 //    NSLog(@"wb_ %@", itemWhitelist);
+//    NSLog(@"wb_ %@", itemBlacklist);
 }
 
 -(BOOL)shouldApply:(NSString*) class {
-    BOOL result = true;
     if (useWhitelist)
         if (![itemWhitelist containsObject:[[NSBundle mainBundle] bundleIdentifier]])
-            result = false;
+            return false;
     if ([itemBlacklist containsObject:class])
-        result = false;
+        return false;
     if ([APP_BLACKLIST containsObject:[[NSBundle mainBundle] bundleIdentifier]])
-        result = false;
-    return result;
+        return false;
+    if ([CLS_BLACKLIST indexOfObject:class] != NSNotFound)
+        return false;
+    return true;
 }
 
 @end
@@ -183,25 +195,27 @@ ZKSwizzleInterface(wbdd_TView, TView, NSView)
 @implementation wbdd_TView
 
 - (void)setFrameSize:(struct CGSize)arg1 {
-//    NSLog(@"wbdd - tview - %@", self.className);
     ZKOrig(void, arg1);
-    if ([plugin shouldApply:[self className]]) {
-        Boolean apply = true;
-        NSArray *bl = @[@"TDesktopIcon", @"TDesktopTitleBubbleView", @"TIconSelectionView", @"TNewIconView"];
-        for (NSString *cls in bl) {
-            if ([self isKindOfClass:NSClassFromString(cls)]) {
-                apply = false;
-                break;
+    if (!resizing) {
+        if ([plugin shouldApply:[self className]]) {
+            NSLog(@"wbdd - tview - %@ - %@", self.className, NSStringFromSelector(_cmd));
+            
+            Boolean apply = true;
+            for (NSString *cls in CLS_BLACKLIST) {
+                if ([self isKindOfClass:NSClassFromString(cls)]) {
+                    apply = false;
+                    break;
+                }
             }
-        }
-        
-        if ([self isKindOfClass:NSClassFromString(@"TNewIconView")]) {
-            [self performSelector:@selector(setTitleFontColor:) withObject:[NSColor whiteColor]];
-        }
-        
-        if (apply) {
-            [self performSelector:@selector(setBackgroundColor:) withObject:[NSColor colorWithCalibratedWhite:0.1 alpha:1.0]];
-            [plugin dd_updateDarkModeStateForTreeStartingAtView:self];
+            
+            if ([self isKindOfClass:NSClassFromString(@"TNewIconView")]) {
+                [self performSelector:setTFC withObject:[NSColor whiteColor]];
+            }
+            
+            if (apply) {
+                [self performSelector:@selector(setBackgroundColor:) withObject:[NSColor colorWithCalibratedWhite:0.1 alpha:1.0]];
+                [plugin dd_updateDarkModeStateForTreeStartingAtView:self];
+            }
         }
     }
 }
@@ -212,7 +226,7 @@ ZKSwizzleInterface(wbdd_TBrowserTableView, TBrowserTableView, NSTableView)
 @implementation wbdd_TBrowserTableView
 
 - (void)reloadData {
-//    NSLog(@"wbdd - tbrowsertableview - %@", self.className);
+    NSLog(@"wbdd - TBrowserTableView - %@ - %@", self.className, NSStringFromSelector(_cmd));
     ZKOrig(void);
     if ([plugin shouldApply:[self className]]) {
         [self performSelector:@selector(setBackgroundColor:) withObject:[NSColor colorWithCalibratedWhite:0.1 alpha:1.0]];
@@ -225,26 +239,37 @@ ZKSwizzleInterface(wbdd_NSView, NSView, NSObject)
 @implementation wbdd_NSView
 
 - (void)setFrameSize:(struct CGSize)arg1 {
-//    NSLog(@"wbdd - nsview - %@", self.className);
     ZKOrig(void, arg1);
-    if ([plugin shouldApply:[self className]]) {
-        Boolean apply = true;
-        NSArray *bl = @[@"TDesktopIcon", @"TDesktopTitleBubbleView", @"TIconSelectionView", @"TNewIconView"];
-        for (NSString *cls in bl) {
-            if ([self isKindOfClass:NSClassFromString(cls)]) {
-                apply = false;
-                break;
+    if (!resizing) {
+        if ([plugin shouldApply:[self className]]) {
+            NSLog(@"wbdd - nsview - %@", self.className);
+            Boolean apply = true;
+            for (NSString *cls in CLS_BLACKLIST) {
+                if ([self isKindOfClass:NSClassFromString(cls)]) {
+                    apply = false;
+                    break;
+                }
+            }
+            
+            if ([self isKindOfClass:NSClassFromString(@"TNewIconView")]) {
+                [self performSelector:setTFC withObject:[NSColor whiteColor]];
+            }
+            
+            if (apply) {
+                [plugin dd_updateDarkModeStateForTreeStartingAtView:(NSView*)self];
             }
         }
-        
-        if ([self isKindOfClass:NSClassFromString(@"TNewIconView")]) {
-            [self performSelector:@selector(setTitleFontColor:) withObject:[NSColor whiteColor]];
-        }
-        
-        if (apply) {
-            [plugin dd_updateDarkModeStateForTreeStartingAtView:(NSView*)self];
-        }
     }
+}
+
+@end
+
+ZKSwizzleInterface(wbdd_NSWindow, NSWindow, NSObject)
+@implementation wbdd_NSWindow
+
+- (BOOL)_inLiveResize {
+    resizing = ZKOrig(BOOL);
+    return ZKOrig(BOOL);
 }
 
 @end
