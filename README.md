@@ -5,15 +5,16 @@
 # Information:
 
 - Designed for 10.10+ (unneccesary on 10.13+)
-- Dark Mode is a SIMBL plugin that tries to bring dark mode to almost every application on macOS that doesn't natively have it
+- Dark Mode is a SIMBL plugin that tries to bring dark mode to versions of macOS that don't come with dark mode
 - Author: [w0lfschild](https://github.com/w0lfschild)
 - Modifier: [The-SamminAter](https://github.com/The-SamminAter)
 
 # Note:
 
+- Dark Mode isn't perfect, and there are some problems with it
+- Not all applications will be effected
 - Some applications may look bad or crash
-- Applications with custom windows will likely not be effected
-- You can blacklist an app using the GUI or terminal:
+- You can disable Dark Mode for an app using the GUI or terminal:
     - `defaults write org.w0lf.darkmode $(osascript -e 'id of app "Application Name"') 0`
 
 # Installation:
