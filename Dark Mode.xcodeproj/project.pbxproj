@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80A56598227BF34F004E073A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A56597227BF34E004E073A /* Assets.xcassets */; };
-		80A5659A227BF3B0004E073A /* DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A56599227BF3B0004E073A /* DarkMode.m */; };
+		80A5659A227BF3B0004E073A /* darkmode.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A56599227BF3B0004E073A /* darkmode.m */; };
 		80A5659C227BF3E7004E073A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80A5659B227BF3E7004E073A /* Info.plist */; };
 		80A565A1227BF471004E073A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5659D227BF470004E073A /* AppDelegate.m */; };
 		80A565A2227BF471004E073A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5659F227BF470004E073A /* main.m */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		80A56597227BF34E004E073A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Dark Mode's GUI/Assets.xcassets"; sourceTree = "<group>"; };
-		80A56599227BF3B0004E073A /* DarkMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DarkMode.m; path = "Dark Mode/DarkMode.m"; sourceTree = "<group>"; };
+		80A56599227BF3B0004E073A /* darkmode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = darkmode.m; path = "Dark Mode/darkmode.m"; sourceTree = "<group>"; };
 		80A5659B227BF3E7004E073A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Dark Mode/Info.plist"; sourceTree = "<group>"; };
 		80A5659D227BF470004E073A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Dark Mode's GUI/AppDelegate.m"; sourceTree = "<group>"; };
 		80A5659E227BF470004E073A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Dark Mode's GUI/AppDelegate.h"; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				80A5659B227BF3E7004E073A /* Info.plist */,
-				80A56599227BF3B0004E073A /* DarkMode.m */,
+				80A56599227BF3B0004E073A /* darkmode.m */,
 				FBC27FE81E637D4B00F6516D /* ZKSwizzle */,
 			);
 			name = "Dark Mode";
@@ -235,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC27FE71E637D3F00F6516D /* ZKSwizzle.m in Sources */,
-				80A5659A227BF3B0004E073A /* DarkMode.m in Sources */,
+				80A5659A227BF3B0004E073A /* darkmode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +365,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.w0lf.darkmode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
