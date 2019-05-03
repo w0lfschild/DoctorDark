@@ -4,7 +4,7 @@
 
 # Information:
 
-- Designed for 10.10+ (unneccesary on 10.13+)
+- Designed for 10.10+ (unneccesary on 10.13+, but can be used for the translucent effect)
 - Dark Mode is a SIMBL plugin that tries to bring dark mode to versions of macOS that don't come with dark mode
 - Author: [w0lfschild](https://github.com/w0lfschild)
 - Modifier: [The-SamminAter](https://github.com/The-SamminAter)
