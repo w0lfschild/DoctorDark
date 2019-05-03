@@ -33,8 +33,18 @@
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="tbn-PS-H0u"/>
+                            <menuItem title="Quit Dark Mode's GUI" keyEquivalent="q" id="kbX-vK-bTo">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="XYK-vq-kv5"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Quit Dark Mode's GUI" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Force Quit Dark Mode's GUI" id="4sb-4s-VLi" userLabel="Force Quit">
+                                <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
