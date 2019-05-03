@@ -11,8 +11,8 @@
 
 # Note:
 
-- Dark Mode isn't perfect, and there are some problems with it
-- Not all applications will be effected
+- Dark Mode isn't perfect, and has some problems
+- Not all applications will be affected
 - Some applications may look bad or crash
 - You can disable Dark Mode for an app using [the GUI](https://github.com/The-SamminAter/DarkMode/blob/master/build/Dark%20Mode's%20GUI.zip) or terminal:
     - `defaults write org.w0lf.darkmode $(osascript -e 'id of app "Application Name"') 0`
