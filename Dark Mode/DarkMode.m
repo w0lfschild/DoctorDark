@@ -14,7 +14,7 @@
 #define APP_BLACKLIST @[@"com.apple.loginwindow", @"com.apple.iTunes", @"com.apple.Terminal",\
                         @"com.sublimetext.2", @"com.sublimetext.3", @"com.googlecode.iterm2",\
                         @"com.google.Chrome.canary", @"com.google.Chrome", @"com.jriver.MediaCenter21",\
-                        @"com.teamspeak.TeamSpeak3", @"org.mozilla.firefox", @"com.cocoatech.PathFinder", @"com.github.GitHub",\
+                        @"com.teamspeak.TeamSpeak3", @"org.mozilla.firefox", @"com.bombich.ccc*",  @"com.cocoatech.PathFinder", @"com.github.GitHub",\
                         @"com.apple.ActivityMonitor"]
 
 #define APP_WHITELIST @[@"com.apple.finder", @"com.apple.systempreferences"]
