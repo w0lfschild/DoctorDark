@@ -155,6 +155,7 @@
 					};
 					FB61D73D1C3CA27D00FA3C4C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 84UJ535N93;
 					};
 				};
 			};
@@ -376,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 84UJ535N93;
 				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -389,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 84UJ535N93;
 				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

@@ -87,13 +87,22 @@ NSDictionary *sharedDict;
     }
 }
 
+//I think this is where it searches for apps
 - (void)getAPPList {
     NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];
-    
+ 
     [self readFolder:@"/Applications" :myDict];
     [self readFolder:@"/Applications/Utilities" :myDict];
     [self readFolder:@"/System/Library/CoreServices" :myDict];
+    [self readFolder:@"/Volumes/Macintosh HD/Applications" :myDict ];
+// Volumes not named 'Macintosh HD' doesn't work, I'll try to make it work
+    [self readFolder:@"/Volumes/*/Applications" :myDict ];
+//Some apps are stored in the user's Application folder instead of the main one
     [self readFolder:[NSString stringWithFormat:@"%@/Applications", NSHomeDirectory()] :myDict];
+//Sometimes people keep apps in Downloads
+    [self readFolder:[NSString stringWithFormat:@"%@/Downloads", NSHomeDirectory()] :myDict];
+//Sometimes apps are stored in the user's Library/Application Support
+    [self readFolder:[NSString stringWithFormat:@"%@/Library/Application Support", NSHomeDirectory()] :myDict];
     
     NSArray *keys = [myDict allKeys];
     NSArray *sortedKeys = [keys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
