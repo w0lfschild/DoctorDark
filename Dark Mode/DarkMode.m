@@ -20,7 +20,7 @@
                         @"com.urgesoftware.wineskin.wineskin", @"org.kronenberg.WineBottler", @"com.cocoatech.PathFinder",\
                         @"com.github.GitHub", @"com.apple.ActivityMonitor"]
 
-#define APP_WHITELIST @[@"com.apple.finder", @"com.apple.systempreferences"]
+#define APP_WHITELIST @[@"com.apple.finder", @"com.apple.systempreferences", @"com.apple.iChat", @"com.urgesoftware.wineskin.wineskinwinery"]
 
 #define CLS_BLACKLIST @[@"NSStatusBarWindow", @"BookmarkBarFolderWindow", @"TShrinkToFitWindow",\
                         @"QLFullscreenWindow", @"QLPreviewPanel", @"TDesktopWindow",\
