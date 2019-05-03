@@ -11,7 +11,7 @@
 #import "ZKSwizzle.h"
 #import <objc/runtime.h>
 
-//idk what 
+//blacklist and whitelist
 #define APP_BLACKLIST @[@"com.apple.loginwindow", @"com.apple.iTunes", @"com.apple.Terminal",\
                         @"com.sublimetext.2", @"com.sublimetext.3", @"com.googlecode.iterm2",\
                         @"com.google.Chrome.canary", @"com.google.Chrome", @"com.jriver.MediaCenter21",\
