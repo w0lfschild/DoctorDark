@@ -83,28 +83,8 @@ SEL             setTFC;
             NSLog(@"winBuddy is blocked in this application because of issues");
         }
     }
-    if (osx_ver <= 13) {
-        /* Check if our current bundleIdentifier is blacklisted */
-        [plugin dd_initializePrefs];
-        
-        if ([plugin shouldApply:@""]) {
-            /* Loop through all our windows and set their appearance */
-            for (NSWindow *win in [[NSApplication sharedApplication] windows])
-                [plugin dd_applyDarkAppearanceToWindow:win];
-            
-            /* Add an observer to set the appearence of all new windows we make that become a key window */
-            [[NSNotificationCenter defaultCenter] addObserver:plugin
-                                                     selector:@selector(dd_WindowDidBecomeKey:)
-                                                         name:NSWindowDidBecomeKeyNotification
-                                                       object:nil];
-            
-            NSLog(@"%@ loaded into %@ on macOS 10.%ld", [self class], [[NSBundle mainBundle] bundleIdentifier], (long)osx_ver);
-        } else {
-            NSLog(@"winBuddy is blocked in this application because of issues");
-        }
-    }
     else {
-        NSLog(@"winBuddy is blocked in this application because of your version of macOS is too old or new");
+        NSLog(@"winBuddy is blocked in this application because of your version of macOS/OS X is too old");
     }
 }
 
