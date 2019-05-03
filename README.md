@@ -18,8 +18,8 @@
 
 # Installation:
 
-1. Download [mySIMBL](https://github.com/w0lfschild/app_updates/raw/master/mySIMBL/mySIMBL_0.2.5.zip)
-2. Download [Dark Mode](https://github.com/The-SamminAter/DarkMode/blob/master/build/DarkMode.bundle.zip)
+1. Download [mySIMBL](https://github.com/w0lfschild/app_updates/raw/master/mySIMBL/mySIMBL_master.zip)
+2. Download [Dark Mode](https://github.com/The-SamminAter/DarkMode/blob/master/build/Dark%20Mode.bundle.zip)
 3. Unzip downloads
 4. Open `DarkMode.bundle` with `mySIMBL.app`
 5. Restart any application to have DoctorDark plugin loaded
