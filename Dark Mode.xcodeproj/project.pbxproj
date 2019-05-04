@@ -27,6 +27,7 @@
 		80A565A0227BF471004E073A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Dark Mode's GUI/Info.plist"; sourceTree = "<group>"; };
 		80A565A7227BF50B004E073A /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = "Dark Mode's GUI/MainMenu.xib"; sourceTree = "<group>"; };
 		80A72BF0227BF6DB00D8119B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80D50960227E32DF0099A554 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FB16B34C1BA7D821009F455F /* Dark Mode.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark Mode.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB61D73E1C3CA27D00FA3C4C /* Dark Mode's GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Mode's GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC27FE51E637D3F00F6516D /* ZKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = SOURCE_ROOT; };
@@ -55,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				80A72BF0227BF6DB00D8119B /* README.md */,
+				80D50960227E32DF0099A554 /* .gitignore */,
 				FB16B34E1BA7D821009F455F /* Dark Mode */,
 				FB61D73F1C3CA27D00FA3C4C /* Dark Mode's GUI */,
 				FB16B34D1BA7D821009F455F /* Products */,
