@@ -1,6 +1,6 @@
 //
-//  darkmode.m
-//  darkmode
+//  dmode.m
+//  dmode
 //
 //  Created by Wolfgang Baird on 6/29/16.
 //  Copyright © 2015 - 2016 Wolfgang Baird. All rights reserved.
@@ -28,10 +28,10 @@
                         @"TNewIconView", @"TBasicImageView", @"TDesktopIconSelectionView",\
                         @"TDesktopIconView"]
 
-@interface darkmode : NSObject
+@interface dmode : NSObject
 @end
 
-darkmode          *plugin;
+dmode          *plugin;
 BOOL            resizing;
 BOOL            useWhitelist;
 NSMutableArray  *itemBlacklist;
@@ -40,13 +40,13 @@ NSDictionary    *sharedDict = nil;
 static void     *dd_isActive = &dd_isActive;
 SEL             setTFC;
 
-@implementation darkmode
+@implementation dmode
 
 /* Shared instance of this plugin so we can call it's methods elsewhere */
-+ (darkmode*) sharedInstance {
-    static darkmode* plugin = nil;
++ (dmode*) sharedInstance {
+    static dmode* plugin = nil;
     if (plugin == nil)
-        plugin = [[darkmode alloc] init];
+        plugin = [[dmode alloc] init];
     return plugin;
 }
 
@@ -60,7 +60,7 @@ SEL             setTFC;
 /* Called when the plugin first loads */
 + (void)load {
     /* Initialize an instance of our plugin */
-    plugin = [darkmode sharedInstance];
+    plugin = [dmode sharedInstance];
     NSInteger osx_ver = [[NSProcessInfo processInfo] operatingSystemVersion].minorVersion;
     setTFC = NSSelectorFromString(@"setTitleFontColor:");
     if (osx_ver >= 9) {
@@ -154,7 +154,7 @@ SEL             setTFC;
     
     [itemBlacklist addObjectsFromArray:APP_BLACKLIST];
     
-    NSMutableDictionary *pluginPrefs = [NSMutableDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/org.w0lf.darkmode.plist"]];
+    NSMutableDictionary *pluginPrefs = [NSMutableDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/org.w0lf.dmode.plist"]];
     NSArray *addItems;
     addItems = [pluginPrefs objectForKey:@"bundleWhitelist"];
     [itemWhitelist addObjectsFromArray:addItems];
