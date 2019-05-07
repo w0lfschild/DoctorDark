@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80A56598227BF34F004E073A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A56597227BF34E004E073A /* Assets.xcassets */; };
+		80A5659A227BF3B0004E073A /* darkmode.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A56599227BF3B0004E073A /* darkmode.m */; };
+		80A5659C227BF3E7004E073A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80A5659B227BF3E7004E073A /* Info.plist */; };
+		80A565A1227BF471004E073A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5659D227BF470004E073A /* AppDelegate.m */; };
+		80A565A2227BF471004E073A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5659F227BF470004E073A /* main.m */; };
+		80A565A3227BF471004E073A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80A565A0227BF471004E073A /* Info.plist */; };
+		80A565A8227BF50C004E073A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A565A7227BF50B004E073A /* MainMenu.xib */; };
+		FBC27FE71E637D3F00F6516D /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80A56597227BF34E004E073A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Dark Mode's GUI/Assets.xcassets"; sourceTree = "<group>"; };
+		80A56599227BF3B0004E073A /* darkmode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = darkmode.m; path = "Dark Mode/darkmode.m"; sourceTree = "<group>"; };
+		80A5659B227BF3E7004E073A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Dark Mode/Info.plist"; sourceTree = "<group>"; };
+		80A5659D227BF470004E073A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Dark Mode's GUI/AppDelegate.m"; sourceTree = "<group>"; };
+		80A5659E227BF470004E073A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Dark Mode's GUI/AppDelegate.h"; sourceTree = "<group>"; };
+		80A5659F227BF470004E073A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Dark Mode's GUI/main.m"; sourceTree = "<group>"; };
+		80A565A0227BF471004E073A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Dark Mode's GUI/Info.plist"; sourceTree = "<group>"; };
+		80A565A7227BF50B004E073A /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = "Dark Mode's GUI/MainMenu.xib"; sourceTree = "<group>"; };
+		80A72BF0227BF6DB00D8119B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80D50960227E32DF0099A554 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FB16B34C1BA7D821009F455F /* Dark Mode.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dark Mode.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB61D73E1C3CA27D00FA3C4C /* Dark Mode's GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Mode's GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC27FE51E637D3F00F6516D /* ZKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = SOURCE_ROOT; };
+		FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB16B3491BA7D821009F455F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB61D73B1C3CA27D00FA3C4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB16B3431BA7D821009F455F = {
+			isa = PBXGroup;
+			children = (
+				80A72BF0227BF6DB00D8119B /* README.md */,
+				80D50960227E32DF0099A554 /* .gitignore */,
+				FB16B34E1BA7D821009F455F /* Dark Mode */,
+				FB61D73F1C3CA27D00FA3C4C /* Dark Mode's GUI */,
+				FB16B34D1BA7D821009F455F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB16B34D1BA7D821009F455F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB16B34C1BA7D821009F455F /* Dark Mode.bundle */,
+				FB61D73E1C3CA27D00FA3C4C /* Dark Mode's GUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB16B34E1BA7D821009F455F /* Dark Mode */ = {
+			isa = PBXGroup;
+			children = (
+				80A5659B227BF3E7004E073A /* Info.plist */,
+				80A56599227BF3B0004E073A /* darkmode.m */,
+				FBC27FE81E637D4B00F6516D /* ZKSwizzle */,
+			);
+			name = "Dark Mode";
+			sourceTree = "<group>";
+		};
+		FB61D73F1C3CA27D00FA3C4C /* Dark Mode's GUI */ = {
+			isa = PBXGroup;
+			children = (
+				80A565A7227BF50B004E073A /* MainMenu.xib */,
+				80A5659E227BF470004E073A /* AppDelegate.h */,
+				80A5659D227BF470004E073A /* AppDelegate.m */,
+				80A565A0227BF471004E073A /* Info.plist */,
+				80A5659F227BF470004E073A /* main.m */,
+				80A56597227BF34E004E073A /* Assets.xcassets */,
+			);
+			name = "Dark Mode's GUI";
+			sourceTree = "<group>";
+		};
+		FBC27FE81E637D4B00F6516D /* ZKSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				FBC27FE51E637D3F00F6516D /* ZKSwizzle.h */,
+				FBC27FE61E637D3F00F6516D /* ZKSwizzle.m */,
+			);
+			name = ZKSwizzle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB16B34B1BA7D821009F455F /* Dark Mode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB16B3521BA7D821009F455F /* Build configuration list for PBXNativeTarget "Dark Mode" */;
+			buildPhases = (
+				FB16B3481BA7D821009F455F /* Sources */,
+				FB16B3491BA7D821009F455F /* Frameworks */,
+				FB16B34A1BA7D821009F455F /* Resources */,
+				FB16B3581BA7D9E4009F455F /* Increment Build Number and Install Bundle */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dark Mode";
+			productName = zestyWin;
+			productReference = FB16B34C1BA7D821009F455F /* Dark Mode.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FB61D73D1C3CA27D00FA3C4C /* Dark Mode's GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB61D74C1C3CA27D00FA3C4C /* Build configuration list for PBXNativeTarget "Dark Mode's GUI" */;
+			buildPhases = (
+				FB61D73A1C3CA27D00FA3C4C /* Sources */,
+				FB61D73B1C3CA27D00FA3C4C /* Frameworks */,
+				FB61D73C1C3CA27D00FA3C4C /* Resources */,
+				FB4978921CFC154A005A2253 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dark Mode's GUI";
+			productName = "zestyWin-GUI";
+			productReference = FB61D73E1C3CA27D00FA3C4C /* Dark Mode's GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB16B3441BA7D821009F455F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					FB16B34B1BA7D821009F455F = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					FB61D73D1C3CA27D00FA3C4C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 84UJ535N93;
+					};
+				};
+			};
+			buildConfigurationList = FB16B3471BA7D821009F455F /* Build configuration list for PBXProject "Dark Mode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB16B3431BA7D821009F455F;
+			productRefGroup = FB16B34D1BA7D821009F455F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB16B34B1BA7D821009F455F /* Dark Mode */,
+				FB61D73D1C3CA27D00FA3C4C /* Dark Mode's GUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB16B34A1BA7D821009F455F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A5659C227BF3E7004E073A /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB61D73C1C3CA27D00FA3C4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A56598227BF34F004E073A /* Assets.xcassets in Resources */,
+				80A565A3227BF471004E073A /* Info.plist in Resources */,
+				80A565A8227BF50C004E073A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB16B3581BA7D9E4009F455F /* Increment Build Number and Install Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number and Install Bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# @desc Auto-increment the build number every time the project is run.\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\n# @desc Move bundle to SIMBL plugins folder after building\nif [[ \"$WRAPPER_EXTENSION\" == \"bundle\" ]]; then\nif [[ -e /Library/Application\\ Support/SIMBL/Plugins ]]; then\ncp -Rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.$WRAPPER_EXTENSION\" /Library/Application\\ Support/SIMBL/Plugins\nfi\nfi\n\nif [[ ! -e \"${SRCROOT}/build\" ]]; then\nmkdir \"${SRCROOT}/build\"\nfi\ncp -Rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.$WRAPPER_EXTENSION\" \"${SRCROOT}/build\"\n#zip -r \"${SRCROOT}/build/${EXECUTABLE_NAME}_${NEWVERSIONSTRING}.zip\" \"${SRCROOT}/build/${EXECUTABLE_NAME}.bundle\"\n#/Users/w0lf/bin/trashman \"${SRCROOT}/build/${EXECUTABLE_NAME}.bundle\"";
+		};
+		FB4978921CFC154A005A2253 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# @desc Auto-increment the build number every time the project is run.\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\n# @desc Move bundle to SIMBL plugins folder after building\nif [[ \"$WRAPPER_EXTENSION\" == \"bundle\" ]]; then\nif [[ -e /Library/Application\\ Support/SIMBL/Plugins ]]; then\ncp -Rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.$WRAPPER_EXTENSION\" /Library/Application\\ Support/SIMBL/Plugins\nfi\nfi\n\nif [[ ! -e \"${SRCROOT}/build\" ]]; then\nmkdir \"${SRCROOT}/build\"\nfi\ncp -Rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.$WRAPPER_EXTENSION\" \"${SRCROOT}/build\"\n#zip -r \"${SRCROOT}/build/${EXECUTABLE_NAME}_${NEWVERSIONSTRING}.zip\" \"${SRCROOT}/build/${EXECUTABLE_NAME}.bundle\"\n#/Users/w0lf/bin/trashman \"${SRCROOT}/build/${EXECUTABLE_NAME}.bundle\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB16B3481BA7D821009F455F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC27FE71E637D3F00F6516D /* ZKSwizzle.m in Sources */,
+				80A5659A227BF3B0004E073A /* darkmode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB61D73A1C3CA27D00FA3C4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A565A2227BF471004E073A /* main.m in Sources */,
+				80A565A1227BF471004E073A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FB16B3501BA7D821009F455F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.12;
+			};
+			name = Debug;
+		};
+		FB16B3511BA7D821009F455F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx10.12;
+			};
+			name = Release;
+		};
+		FB16B3531BA7D821009F455F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = org.w0lf.darkmode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FB16B3541BA7D821009F455F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.w0lf.darkmode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		FB61D74D1C3CA27D00FA3C4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 84UJ535N93;
+				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.w0lf.darkmodeGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB61D74E1C3CA27D00FA3C4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 84UJ535N93;
+				INFOPLIST_FILE = "${EXECUTABLE_NAME}/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.w0lf.darkmodeGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB16B3471BA7D821009F455F /* Build configuration list for PBXProject "Dark Mode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB16B3501BA7D821009F455F /* Debug */,
+				FB16B3511BA7D821009F455F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB16B3521BA7D821009F455F /* Build configuration list for PBXNativeTarget "Dark Mode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB16B3531BA7D821009F455F /* Debug */,
+				FB16B3541BA7D821009F455F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB61D74C1C3CA27D00FA3C4C /* Build configuration list for PBXNativeTarget "Dark Mode's GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB61D74D1C3CA27D00FA3C4C /* Debug */,
+				FB61D74E1C3CA27D00FA3C4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB16B3441BA7D821009F455F /* Project object */;
+}
