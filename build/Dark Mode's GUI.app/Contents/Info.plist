@@ -13,13 +13,13 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.w0lf.darkmodeGUI</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>1.0</string>
+	<string>1.0.15</string>
 	<key>CFBundleName</key>
 	<string>Dark Mode's GUI</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.15</string>
+	<string>1.0.16</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -27,7 +27,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0.15</string>
+	<string>1.0.16</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>

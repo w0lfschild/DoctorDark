@@ -87,7 +87,17 @@ NSDictionary *sharedDict;
     }
 }
 
-//I think this is where it searches for apps
+//This should search all volumes
+//NSArray *keys = [NSArray arrayWithObjects:NSURLVolumeURLKey, NSURLIsVolumeKey, nil];
+//NSArray *volumeUrls = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:keys options:NSVolumeEnumerationSkipHiddenVolumes];
+//for (NSURL *volumeUrl in volumeUrls)
+//{
+//    BOOL mayBeBootVolume = NO;
+//    NSString* pathToVolume = [volumeUrl path];
+//    [self readFolder: [pathToVolume stringByAppendingString: @"/Applications"];
+//     }
+
+//This searches for apps
 - (void)getAPPList {
     NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];
  
@@ -95,8 +105,6 @@ NSDictionary *sharedDict;
     [self readFolder:@"/Applications/Utilities" :myDict];
     [self readFolder:@"/System/Library/CoreServices" :myDict];
     [self readFolder:@"/Volumes/Macintosh HD/Applications" :myDict ];
-// Volumes not named 'Macintosh HD' doesn't work, I'll try to make it work
-    [self readFolder:@"/Volumes/*/Applications" :myDict ];
 //Some apps are stored in the user's Application folder instead of the main one
     [self readFolder:[NSString stringWithFormat:@"%@/Applications", NSHomeDirectory()] :myDict];
 //Sometimes people keep apps in Downloads
